@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clean Scent offers exceptional cleaning services for homes, offices, and schools in California. Experience quality, sustainability, and personalized care with our professional team.">
+    <meta name="keywords" content="cleaning services, California cleaning, eco-friendly cleaning, residential cleaning, office cleaning, school cleaning">
+    <meta name="author" content="Clean Scent">
+    <title>Clean Scent - Transforming Spaces with Excellence</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(to right, #76c7c0, #e3f7f4);
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        header img {
+            width: 350px;
+            animation: bounceIn 2s;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            animation: fadeInDown 2s;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: fadeIn 2s;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2.5s;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background: #76c7c0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            animation: fadeIn 3s;
+        }
+        .hero button:hover {
+            background: #63b2ae;
+        }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: white;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            cursor: pointer;
+        }
+        .whatsapp-icon img {
+            width: 35px;
+        }
+        section {
+            padding: 50px 10%;
+            background-color: #fff;
+        }
+        section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+        section img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .philosophy, .services, .testimonials, .contact {
+            text-align: center;
+        }
+        .philosophy h2, .services h2, .testimonials h2, .contact h2 {
+            color: #1e3a5f;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .philosophy p, .services p, .testimonials p, .contact p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        .pillars, .service-cards, .testimonial-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .pillar, .service-card, .testimonial {
+            width: 30%;
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .pillar:hover, .service-card:hover, .testimonial:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .pillar img, .service-card img, .testimonial img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            animation: fadeIn 1.5s;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+        .pillar img:hover, .service-card img:hover, .testimonial img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .pillar h3, .service-card h3, .testimonial h3 {
+            color: #76c7c0;
+            margin-bottom: 10px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #1e3a5f;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #76c7c0;
+        }
+        footer {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 30px 10%;
+            text-align: center;
+            margin-top: 30px;
+        }
+        footer p {
+            margin: 10px 0;
+        }
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        footer .footer-links a {
+            color: #76c7c0;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceIn {
+            0%, 20%, 40%, 60%, 80%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style
+</head>
+<body>
+    <header>
+        
+        <h1>Welcome to Clean Scent</h1>
+        <p>Excellence in cleaning that transforms spaces across California</p>
+        <img src="LOGO .png" alt="Clean Scent Logo">
+    </header>
+    <div class="whatsapp-icon" onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank');">
+        <img src="ICON.png" alt="WhatsApp">
+    </div>
+    <section class="philosophy">
+        <h2>Our Philosophy: More Than Cleaning</h2>
+        <p>At Clean Scent, we believe in three fundamental pillars that drive our services:</p>
+        <div class="pillars">
+            <div class="pillar">
+                <img src="img 1.png" alt="Guaranteed Quality">
+                <h3>Guaranteed Quality</h3>
+                <p>We focus on delivering exceptional results for every service. We don’t stop until you’re 100% satisfied.</p>
+            </div>
+            <div class="pillar">
+                <img src="img 3.png" alt="Sustainability">
+                <h3>Sustainability</h3>
+                <p>We use eco-friendly products to protect your health and minimize our environmental impact.</p>
+            </div>
+            <div class="pillar">
+                <img src="img 4.png" alt="Customer Care">
+                <h3>Customer Care</h3>
+                <p>Each client is unique to us. We tailor our services to your specific needs with a friendly and professional touch.</p>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <h2>Our Services</h2>
+        <p>Explore our range of personalized cleaning solutions for homes, offices, and schools.</p>
+        <img src="img 5.png" alt="Cleaning Services">
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="img 6.png" alt="Residential Cleaning">
+                <h3>Residential Cleaning</h3>
+                <p>Standard, deep, move-in/out, and carpet cleaning services to keep your home spotless.</p>
+            </div>
+            <div class="service-card">
+                <img src="img 7.png" alt="Commercial Cleaning">
+                <h3>Commercial Cleaning</h3>
+                <p>Office cleaning, advanced disinfection, and post-construction cleaning tailored to your business needs.</p>
+            </div>
+            <div class="service-card">
+                <img src="img 8.png" alt="School Cleaning">
+                <h3>School Cleaning</h3>
+                <p>Daily maintenance, deep disinfection, and event preparation for a safe and organized learning environment.</p>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p>Real testimonials from satisfied customers who trust Clean Scent for their cleaning needs.</p>
+        <div class="testimonial-list">
+            <div class="testimonial">
+                <img src="IMAGEN 10.jpg" alt="Client Ana">
+                <h3>"Professional and Reliable"</h3>
+                <p>"Since hiring Clean Scent, my home feels refreshed every week. The team is incredibly professional and attentive to details." - Ana M., California</p>
+            </div>
+            <div class="testimonial">
+                <img src="IMAGEN 9.jpg" alt="Client David">
+                <h3>"Exceeds Expectations"</h3>
+                <p>"As an office manager, we needed a reliable company to keep our space clean year-round. Clean Scent consistently exceeds our expectations." - David R., California</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Contact Us Today</h2>
+        <p>Ready to transform your space? Reach out to us:</p>
+        <ul>
+            <li>📞 Phone: YOUR_PHONE_NUMBER</li>
+            <li>📧 Email: YOUR_EMAIL</li>
+            <li>📍 Address: YOUR_ADDRESS</li>
+        </ul>
+        <p>Follow us on social media for updates, promotions, and cleaning tips.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/YOUR_PAGE" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/YOUR_PAGE" target="_blank">Instagram</a>
+            <a href="https://wa.me/YOUR_NUMBER" target="_blank">WhatsApp</a>
+        </div>
+        
+    </section>
+    <footer>
+        <p>&copy; 2025 Clean Scent. All rights reserved.</p>
+        <p>Your trusted partner for clean and healthy spaces in California.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+</body>
+</html>
