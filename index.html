@@ -8,341 +8,356 @@
     <meta name="author" content="Clean Scent">
     <title>Clean Scent - Transforming Spaces with Excellence</title>
     <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-        color: #333;
-        overflow-x: hidden;
-    }
-
-    header {
-        background: linear-gradient(to right, #76c7c0, #e3f7f4);
-        color: white;
-        padding: 20px 10%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        position: relative;
-    }
-
-    header img {
-        width: 250px;
-        animation: bounceIn 2s;
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-        animation: fadeInDown 2s;
-    }
-
-    header p {
-        font-size: 1rem;
-        margin: 10px 0;
-        animation: slideInLeft 1.5s;
-    }
-
-    .hero {
-        background: url('hero-image.jpg') no-repeat center center/cover;
-        height: 80vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-align: center;
-        padding: 0 20px;
-    }
-
-    .hero h2 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        animation: zoomIn 1.5s ease-in-out;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-        animation: slideInUp 2s ease-in-out;
-    }
-
-    .hero button {
-        padding: 10px 20px;
-        font-size: 1.2rem;
-        background: #76c7c0;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s, transform 0.3s;
-        animation: fadeIn 3s ease-in;
-    }
-
-    .hero button:hover {
-        background: #63b2ae;
-        transform: scale(1.1);
-    }
-
-    .whatsapp-icon {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-        cursor: pointer;
-        animation: pulse 2s infinite;
-    }
-
-    .whatsapp-icon img {
-        width: 35px;
-    }
-
-    section {
-        padding: 50px 10%;
-        background-color: #fff;
-    }
-
-    section img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        animation: fadeIn 1.5s;
-        transition: transform 0.5s, opacity 0.5s;
-    }
-
-    section img:hover {
-        transform: scale(1.05);
-        opacity: 0.9;
-    }
-
-    .philosophy, .services, .testimonials, .contact {
-        text-align: center;
-    }
-
-    .pillars, .service-cards, .testimonial-list {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    .pillar, .service-card, .testimonial {
-        width: calc(33.333% - 20px);
-        background: #f0f8ff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin: 10px;
-        overflow: hidden;
-        transition: transform 0.3s, box-shadow 0.3s;
-        animation: slideInUp 2s;
-    }
-
-    .pillar:hover, .service-card:hover, .testimonial:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .pillar img, .service-card img, .testimonial img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        animation: zoomIn 1.5s;
-        transition: transform 0.5s, opacity 0.5s;
-    }
-
-    .pillar h3, .service-card h3, .testimonial h3 {
-        color: #76c7c0;
-        margin-bottom: 10px;
-        animation: bounceIn 1.5s;
-    }
-
-    footer {
-        background-color: #1e3a5f;
-        color: white;
-        padding: 30px 10%;
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    footer .footer-links {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
-        animation: fadeInUp 2s;
-    }
-
-    footer .footer-links a {
-        color: #76c7c0;
-        text-decoration: none;
-        font-size: 1rem;
-    }
-
-    footer .footer-links a:hover {
-        text-decoration: underline;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    @keyframes fadeInDown {
-        from { opacity: 0; transform: translateY(-50px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(50px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideInLeft {
-        from { opacity: 0; transform: translateX(-50px); }
-        to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes slideInUp {
-        from { opacity: 0; transform: translateY(50px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes zoomIn {
-        from { opacity: 0; transform: scale(0.8); }
-        to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes bounceIn {
-        from, 20%, 40%, 60%, 80%, to {
-            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
         }
 
-        0% {
-            opacity: 0;
-            transform: scale(0.3);
+        h1, h2, h3 {
+            color: #1e3a5f;
         }
 
-        20% {
+        a {
+            text-decoration: none;
+            color: #76c7c0;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #76c7c0, #e3f7f4);
+            color: white;
+            padding: 20px 10%;
+            text-align: center;
+        }
+
+        header img {
+            width: 150px;
+            animation: bounceIn 2s;
+        }
+
+        header h1 {
+            margin: 10px 0;
+            font-size: 2rem;
+            animation: fadeInDown 2s;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin: 10px 0;
+            animation: slideInLeft 1.5s;
+        }
+
+        /* WhatsApp Icon */
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-icon img {
+            width: 35px;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 10%;
+            background-color: #fff;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s;
+        }
+
+        section p {
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        /* Image Container */
+        .image-container {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: zoomIn 1.5s;
+            width: 400px; /* Tamaño fijo para el contenedor */
+            height: 400px; /* Tamaño fijo para el contenedor */
+            margin: 0 auto; /* Centrar el contenedor */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Asegura que las imágenes no se corten */
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        .image-container img:hover {
             transform: scale(1.1);
+            opacity: 0.9;
         }
 
-        40% {
-            transform: scale(0.9);
+        /* Philosophy, Services, Testimonials */
+        .pillars, .service-cards, .testimonial-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        60% {
-            opacity: 1;
-            transform: scale(1.03);
+        .pillar, .service-card, .testimonial {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: slideInUp 2s;
+            text-align: center; /* Centrar el texto */
         }
 
-        80% {
-            transform: scale(0.97);
+        .pillar:hover, .service-card:hover, .testimonial:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
-        to {
-            opacity: 1;
-            transform: scale(1);
+        .pillar h3, .service-card h3, .testimonial h3 {
+            color: #76c7c0;
+            margin-bottom: 10px;
+            animation: bounceIn 1.5s;
         }
-    }
 
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+        /* Contact Section */
+        .contact ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
         }
-        50% {
-            transform: scale(1.1);
-            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
-        }
-        100% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
-        }
-    }
-</style>
 
+        .contact ul li {
+            margin: 10px 0;
+            animation: fadeIn 2s;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            padding: 10px 20px;
+            background: #76c7c0;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #63b2ae;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 30px 10%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            animation: fadeInUp 2s;
+        }
+
+        footer .footer-links a {
+            color: #76c7c0;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes bounceIn {
+            from, 20%, 40%, 60%, 80%, to {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            }
+            0% { opacity: 0; transform: scale(0.3); }
+            20% { transform: scale(1.1); }
+            40% { transform: scale(0.9); }
+            60% { opacity: 1; transform: scale(1.03); }
+            80% { transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Page Load Animation */
+        @keyframes pageLoad {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            animation: pageLoad 1.5s ease-in-out;
+        }
+    </style>
 </head>
 <body>
     <header>
-        
+        <img src="LOGO .png" alt="Clean Scent Logo">
         <h1>Welcome to Clean Scent</h1>
         <p>Excellence in cleaning that transforms spaces across California</p>
-        <img src="LOGO .png" alt="Clean Scent Logo">
     </header>
+
     <div class="whatsapp-icon" onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank');">
         <img src="ICON.png" alt="WhatsApp">
     </div>
+
     <section class="philosophy">
         <h2>Our Philosophy: More Than Cleaning</h2>
         <p>At Clean Scent, we believe in three fundamental pillars that drive our services:</p>
         <div class="pillars">
             <div class="pillar">
-                <img src="img 1.png" alt="Guaranteed Quality">
+                <div class="image-container">
+                    <img src="img 1.png" alt="Guaranteed Quality">
+                </div>
                 <h3>Guaranteed Quality</h3>
                 <p>We focus on delivering exceptional results for every service. We don’t stop until you’re 100% satisfied.</p>
             </div>
             <div class="pillar">
-                <img src="img 3.png" alt="Sustainability">
+                <div class="image-container">
+                    <img src="img 3.png" alt="Sustainability">
+                </div>
                 <h3>Sustainability</h3>
                 <p>We use eco-friendly products to protect your health and minimize our environmental impact.</p>
             </div>
             <div class="pillar">
-                <img src="img 4.png" alt="Customer Care">
+                <div class="image-container">
+                    <img src="img 4.png" alt="Customer Care">
+                </div>
                 <h3>Customer Care</h3>
                 <p>Each client is unique to us. We tailor our services to your specific needs with a friendly and professional touch.</p>
             </div>
         </div>
     </section>
+
     <section class="services">
         <h2>Our Services</h2>
         <p>Explore our range of personalized cleaning solutions for homes, offices, and schools.</p>
-        <img src="img 5.png" alt="Cleaning Services">
         <div class="service-cards">
             <div class="service-card">
-                <img src="img 6.png" alt="Residential Cleaning">
+                <div class="image-container">
+                    <img src="img 6.png" alt="Residential Cleaning">
+                </div>
                 <h3>Residential Cleaning</h3>
                 <p>Standard, deep, move-in/out, and carpet cleaning services to keep your home spotless.</p>
             </div>
             <div class="service-card">
-                <img src="img 7.png" alt="Commercial Cleaning">
+                <div class="image-container">
+                    <img src="img 7.png" alt="Commercial Cleaning">
+                </div>
                 <h3>Commercial Cleaning</h3>
                 <p>Office cleaning, advanced disinfection, and post-construction cleaning tailored to your business needs.</p>
             </div>
             <div class="service-card">
-                <img src="img 8.png" alt="School Cleaning">
+                <div class="image-container">
+                    <img src="img 8.png" alt="School Cleaning">
+                </div>
                 <h3>School Cleaning</h3>
                 <p>Daily maintenance, deep disinfection, and event preparation for a safe and organized learning environment.</p>
             </div>
         </div>
     </section>
+
     <section class="testimonials">
         <h2>What Our Clients Say</h2>
         <p>Real testimonials from satisfied customers who trust Clean Scent for their cleaning needs.</p>
         <div class="testimonial-list">
             <div class="testimonial">
-                <img src="IMAGEN 10.jpg" alt="Client Ana">
+                <div class="image-container">
+                    <img src="IMAGEN 10.jpg" alt="Client Ana">
+                </div>
                 <h3>"Professional and Reliable"</h3>
                 <p>"Since hiring Clean Scent, my home feels refreshed every week. The team is incredibly professional and attentive to details." - Ana M., California</p>
             </div>
             <div class="testimonial">
-                <img src="IMAGEN 9.jpg" alt="Client David">
+                <div class="image-container">
+                    <img src="IMAGEN 9.jpg" alt="Client David">
+                </div>
                 <h3>"Exceeds Expectations"</h3>
                 <p>"As an office manager, we needed a reliable company to keep our space clean year-round. Clean Scent consistently exceeds our expectations." - David R., California</p>
             </div>
         </div>
     </section>
+
     <section class="contact">
         <h2>Contact Us Today</h2>
         <p>Ready to transform your space? Reach out to us:</p>
@@ -357,8 +372,8 @@
             <a href="https://www.instagram.com/YOUR_PAGE" target="_blank">Instagram</a>
             <a href="https://wa.me/YOUR_NUMBER" target="_blank">WhatsApp</a>
         </div>
-        
     </section>
+
     <footer>
         <p>&copy; 2025 Clean Scent. All rights reserved.</p>
         <p>Your trusted partner for clean and healthy spaces in California.</p>
